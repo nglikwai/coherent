@@ -19,7 +19,7 @@ const Posts = () => {
       <PostWrapper>
 
         {posts &&
-          posts.map((post) => <PostCard key={post.description} post={post} />)}
+          posts.map((post) => <PostCard key={post.description + post.title} post={post} />)}
 
         <InfiniteScroll
           dataLength={posts.length} //This is important field to render the next data

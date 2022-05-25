@@ -23,16 +23,16 @@ export default PostCard;
 
 const Wrapper = styled.div`
 @media (max-width:1000px) {
-  width: 45%;
+  width: 47%;
   min-width: 300px;
   }
-  @media (max-width:620px) {
+  @media (max-width:730px) {
   width: 100%;
   }
   width: 310px;
   border: 1px solid #eee;
   border-radius: 4px;
-  margin: 10px 20px 10px 0;
+  margin: 10px ;
   box-shadow: 0 2px 2px rgba(0,0,0,0.2);
 
 `;

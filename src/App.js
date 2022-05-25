@@ -13,7 +13,9 @@ function App() {
   return (
     <Provider store={store}>
       <PageWrapper className="App">
-        <Header />
+        <Float>
+          <Header />
+        </Float>
         <Posts />
       </PageWrapper>
     </Provider>
@@ -25,3 +27,8 @@ export default App;
 const PageWrapper = styled.div`
 
 `;
+
+const Float = styled.div`
+position: sticky;
+top:0;
+`

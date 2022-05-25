@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
-import { loadPostRequest } from "../../redux/search";
+import { loadPostRequest, setPage, setSearchTerm } from "../../redux/search";
 
 
 const Header = () => {
@@ -9,7 +9,9 @@ const Header = () => {
   const [term, setTerm] = useState('')
 
   const submitHandler = () => {
-    dispatch(loadPostRequest(term))
+    dispatch(setPage(1))
+    dispatch(setSearchTerm(term))
+    dispatch(loadPostRequest({ term, page: 1 }))
   }
   return (
 

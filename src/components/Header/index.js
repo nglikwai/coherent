@@ -50,6 +50,7 @@ const Logo = styled.span`
   color: white;
   font-size: 20px;
   font-weight: bold;
+  margin-left: 10px;
 `;
 
 const SearchWrapper = styled.div`
@@ -57,4 +58,6 @@ const SearchWrapper = styled.div`
   border-radius: 4px;
   width: 200px;
   height: 40px;
+  margin-right: 10px;
+
 `;

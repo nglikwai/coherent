@@ -24,6 +24,9 @@ export const postSlice = createSlice({
     setSearchTerm: (state, action) => {
       state.term = action.payload
     },
+    setPage: (state, action) => {
+      state.page = action.payload
+    },
     nextPage: (state) => {
       state.page += 1
     },
@@ -38,7 +41,7 @@ export const postSlice = createSlice({
   },
 });
 
-export const { loadPostRequest, loadPostSuccess, loadPostFail, setSearchTerm, nextPage, loadMoreDateRequest, loadMoreDateSuccess } =
+export const { loadPostRequest, loadPostSuccess, loadPostFail, setSearchTerm, nextPage, loadMoreDateRequest, loadMoreDateSuccess, setPage } =
   postSlice.actions;
 
 export default postSlice.reducer;
