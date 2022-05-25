@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Header from "./components/Header/index.js";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { searchTutorRequest } from "./redux/search";
+import { loadPostRequest } from "./redux/search";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import Posts from "./components/Posts";

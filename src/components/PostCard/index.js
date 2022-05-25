@@ -5,7 +5,7 @@ const PostCard = ({ post }) => {
   return (
     <Wrapper>
       <Heading>
-        <Avatar>{post.source.name.substring(0,1)}</Avatar>
+        <Avatar>{post.source.name.substring(0, 1)}</Avatar>
         <Info>
           <Category>{post.source.name}</Category>
           <Date>{post.publishedAt.toLocaleString()}</Date>
@@ -22,11 +22,19 @@ const PostCard = ({ post }) => {
 export default PostCard;
 
 const Wrapper = styled.div`
+@media (max-width:1000px) {
+  width: 45%;
+  min-width: 300px;
+  }
+  @media (max-width:620px) {
+  width: 100%;
+  }
   width: 310px;
-  height: 380px;
-  border: 1px solid #ccc;
+  border: 1px solid #eee;
   border-radius: 4px;
   margin: 10px 20px 10px 0;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+
 `;
 
 const Heading = styled.div`
@@ -42,30 +50,33 @@ const Info = styled.div`
 `;
 
 const Category = styled.div`
-  font-weight: bold;
+  color: rgba(0, 0, 0, 0.87);
+  margin-bottom:4px;
 `;
 
 const Date = styled.div`
-  color: #999;
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 12px;
 `;
 
 const Avatar = styled.span`
-  color: white;
+  color: #fafafa;
   width: 30px;
   height: 30px;
   font-size: 26px;
   font-weight: bold;
   padding: 10px 10px;
-  background-color: #ccc;
+  background-color: #bdbdbd;
   border-radius: 50%;
 `;
 
 const Image = styled.img`
   width: 100%;
-  height: 170px;
+
 `;
 
 const Title = styled.h3`
+  color: rgba(0, 0, 0, 0.87);
   padding: 0 ;
   margin:10px 12px;
   text-align: left;
@@ -79,7 +90,7 @@ const Title = styled.h3`
 const Description = styled.div`
   padding: 0 10px;
   margin:4px 0;
-  color: #aaa;
+  color: rgba(0, 0, 0, 0.54);
   overflow: hidden;
   text-align: left;
   overflow: hidden;
