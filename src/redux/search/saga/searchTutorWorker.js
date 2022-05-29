@@ -6,10 +6,10 @@ export function* searchTutorWorker(action) {
   try {
 
     const { payload: { term, page } } = action
-    console.log('term', action)
 
 
-    const URL = `https://newsapi.org/v2/everything?q=${term}&apiKey=793334a0847f4ceda2ccd0cc922320c5&page=${page}`
+
+    const URL = `https://newsapi.org/v2/everything?q=${term}&apiKey=793334a0847f4ceda2ccd0cc922320c5&page=${page}&limit=10`
 
     const response = yield call(() => fetch(URL));
 
