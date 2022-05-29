@@ -4,7 +4,7 @@ import styled from "styled-components";
 import PostCard from "../PostCard";
 import Loading from "../Loading";
 import InfiniteScroll from 'react-infinite-scroll-component';
-import { loadPostRequest, nextPage } from "../../redux/search";
+import { loadPostRequest } from "../../redux/search";
 
 const Posts = () => {
 
@@ -22,7 +22,7 @@ const Posts = () => {
           posts.map((post) => <PostCard key={post.description + post.title} post={post} />)}
 
         <InfiniteScroll
-          dataLength={posts.length} //This is important field to render the next data
+          dataLength={posts?.length} 
           next={fetchMoreData}
           hasMore={true}
 
